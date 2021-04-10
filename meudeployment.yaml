@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: teste-nginx
+spec:
+  selector:
+    matchLabels:
+      app: teste-nginx
+  template:
+    metadata:
+      labels:
+        app: teste-nginx
+    spec:
+      containers:
+      - name: teste-nginx
+        image: abimasantos/nginx-v2:v2
